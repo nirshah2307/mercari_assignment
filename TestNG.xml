@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="LoginTest Test Suite">
+    <parameter name="environment" value="production"/>
+    <parameter name="browser" value="chrome"/>
+    <listeners>
+        <listener class-name="com.mercari.listeners.TestListener"/>
+        <listener class-name="com.mercari.listeners.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="UserModuleTest">
+        <classes>
+            <class name="com.mercari.test.AddressTest"/>
+        </classes>
+    </test>
+    <test name="SearchModuleTest">
+        <classes>
+            <class name="com.mercari.test.ItemSearchTest"/>
+        </classes>
+    </test>
+</suite>
